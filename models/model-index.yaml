@@ -14,6 +14,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: NllbEncoder.mlpackage
+    artifact_archive_filename: NllbEncoder.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/NllbEncoder.mlpackage.zip
     source_path: ../models/coreml/NllbEncoder.mlpackage
     model_card: modelcards/unawain-nllb-encoder-int8.md
     upstream_model: facebook/nllb-200-distilled-600M
@@ -33,6 +35,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: NllbDecoderStep.mlpackage
+    artifact_archive_filename: NllbDecoderStep.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/NllbDecoderStep.mlpackage.zip
     source_path: ../models/coreml/NllbDecoderStep.mlpackage
     model_card: modelcards/unawain-nllb-decoder-step-int8.md
     upstream_model: facebook/nllb-200-distilled-600M
@@ -52,6 +56,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: NllbEncoder_pruned.mlpackage
+    artifact_archive_filename: NllbEncoder_pruned.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/NllbEncoder_pruned.mlpackage.zip
     source_path: ../models/coreml/NllbEncoder_pruned.mlpackage
     model_card: modelcards/unawain-nllb-encoder-pruned-int8.md
     upstream_model: facebook/nllb-200-distilled-600M
@@ -71,6 +77,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: NllbDecoderStep_pruned.mlpackage
+    artifact_archive_filename: NllbDecoderStep_pruned.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/NllbDecoderStep_pruned.mlpackage.zip
     source_path: ../models/coreml/NllbDecoderStep_pruned.mlpackage
     model_card: modelcards/unawain-nllb-decoder-step-pruned-int8.md
     upstream_model: facebook/nllb-200-distilled-600M
@@ -90,6 +98,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: BartEncoder.mlpackage
+    artifact_archive_filename: BartEncoder.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/BartEncoder.mlpackage.zip
     source_path: ../models/coreml/BartEncoder.mlpackage
     model_card: modelcards/unawain-bart-encoder-int8.md
     upstream_model: sshleifer/distilbart-cnn-6-6
@@ -109,6 +119,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: BartDecoderStep.mlpackage
+    artifact_archive_filename: BartDecoderStep.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/BartDecoderStep.mlpackage.zip
     source_path: ../models/coreml/BartDecoderStep.mlpackage
     model_card: modelcards/unawain-bart-decoder-step-int8.md
     upstream_model: sshleifer/distilbart-cnn-6-6
@@ -128,6 +140,8 @@ models:
     min_ios: "17.0"
     min_macos: "14.0"
     artifact_filename: QwenSummarizer.mlpackage
+    artifact_archive_filename: QwenSummarizer.mlpackage.zip
+    download_url: https://github.com/ralph-mattew/unawain-public-models/releases/download/v0.1.0/QwenSummarizer.mlpackage.zip
     source_path: ../models/coreml/QwenSummarizer.mlpackage
     model_card: modelcards/unawain-qwen-summarizer-int8.md
     upstream_model: Qwen/Qwen2.5-1.5B-Instruct
