@@ -1,0 +1,139 @@
+version: 1
+updated_at: 2026-05-20
+maintainers:
+  - team: unawain
+    contact: "set-in-github-repo-settings"
+
+models:
+  - id: unawain-nllb-encoder-int8
+    name: NLLB Encoder (600M distilled)
+    family: nllb
+    task: translation
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: NllbEncoder.mlpackage
+    source_path: ../models/coreml/NllbEncoder.mlpackage
+    model_card: modelcards/unawain-nllb-encoder-int8.md
+    upstream_model: facebook/nllb-200-distilled-600M
+    upstream_license: cc-by-nc-4.0
+    upstream_license_spdx: CC-BY-NC-4.0
+    upstream_license_source: ../models/nllb/nllb_600m/README.md
+    commercial_use: prohibited
+    attribution_required: true
+    upstream_terms_summary: Research-focused release; non-commercial use only.
+
+  - id: unawain-nllb-decoder-step-int8
+    name: NLLB Decoder Step (600M distilled)
+    family: nllb
+    task: translation
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: NllbDecoderStep.mlpackage
+    source_path: ../models/coreml/NllbDecoderStep.mlpackage
+    model_card: modelcards/unawain-nllb-decoder-step-int8.md
+    upstream_model: facebook/nllb-200-distilled-600M
+    upstream_license: cc-by-nc-4.0
+    upstream_license_spdx: CC-BY-NC-4.0
+    upstream_license_source: ../models/nllb/nllb_600m/README.md
+    commercial_use: prohibited
+    attribution_required: true
+    upstream_terms_summary: Research-focused release; non-commercial use only.
+
+  - id: unawain-nllb-encoder-pruned-int8
+    name: NLLB Encoder Pruned (int8)
+    family: nllb
+    task: translation
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: NllbEncoder_pruned.mlpackage
+    source_path: ../models/coreml/NllbEncoder_pruned.mlpackage
+    model_card: modelcards/unawain-nllb-encoder-pruned-int8.md
+    upstream_model: facebook/nllb-200-distilled-600M
+    upstream_license: cc-by-nc-4.0
+    upstream_license_spdx: CC-BY-NC-4.0
+    upstream_license_source: ../models/nllb/nllb_600m/README.md
+    commercial_use: prohibited
+    attribution_required: true
+    upstream_terms_summary: Research-focused release; non-commercial use only.
+
+  - id: unawain-nllb-decoder-step-pruned-int8
+    name: NLLB Decoder Step Pruned (int8)
+    family: nllb
+    task: translation
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: NllbDecoderStep_pruned.mlpackage
+    source_path: ../models/coreml/NllbDecoderStep_pruned.mlpackage
+    model_card: modelcards/unawain-nllb-decoder-step-pruned-int8.md
+    upstream_model: facebook/nllb-200-distilled-600M
+    upstream_license: cc-by-nc-4.0
+    upstream_license_spdx: CC-BY-NC-4.0
+    upstream_license_source: ../models/nllb/nllb_600m/README.md
+    commercial_use: prohibited
+    attribution_required: true
+    upstream_terms_summary: Research-focused release; non-commercial use only.
+
+  - id: unawain-bart-encoder-int8
+    name: DistilBART Encoder (CNN 6-6)
+    family: bart
+    task: summarization
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: BartEncoder.mlpackage
+    source_path: ../models/coreml/BartEncoder.mlpackage
+    model_card: modelcards/unawain-bart-encoder-int8.md
+    upstream_model: sshleifer/distilbart-cnn-6-6
+    upstream_license: apache-2.0
+    upstream_license_spdx: Apache-2.0
+    upstream_license_source: ../models/bart/distilbart_cnn_6_6/README.md
+    commercial_use: allowed
+    attribution_required: true
+    upstream_terms_summary: Apache-2.0 terms apply, including preserving notices.
+
+  - id: unawain-bart-decoder-step-int8
+    name: DistilBART Decoder Step (CNN 6-6)
+    family: bart
+    task: summarization
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: BartDecoderStep.mlpackage
+    source_path: ../models/coreml/BartDecoderStep.mlpackage
+    model_card: modelcards/unawain-bart-decoder-step-int8.md
+    upstream_model: sshleifer/distilbart-cnn-6-6
+    upstream_license: apache-2.0
+    upstream_license_spdx: Apache-2.0
+    upstream_license_source: ../models/bart/distilbart_cnn_6_6/README.md
+    commercial_use: allowed
+    attribution_required: true
+    upstream_terms_summary: Apache-2.0 terms apply, including preserving notices.
+
+  - id: unawain-qwen-summarizer-int8
+    name: Qwen Summarizer Step Model (2.5 1.5B Instruct)
+    family: qwen
+    task: summarization
+    format: coreml-mlpackage
+    quantization: int8-per-channel
+    min_ios: "17.0"
+    min_macos: "14.0"
+    artifact_filename: QwenSummarizer.mlpackage
+    source_path: ../models/coreml/QwenSummarizer.mlpackage
+    model_card: modelcards/unawain-qwen-summarizer-int8.md
+    upstream_model: Qwen/Qwen2.5-1.5B-Instruct
+    upstream_license: apache-2.0
+    upstream_license_spdx: Apache-2.0
+    upstream_license_source: ../models/llama/qwen2_5_1b_instruct/LICENSE
+    commercial_use: allowed
+    attribution_required: true
+    upstream_terms_summary: Apache-2.0 terms apply, including preserving notices.

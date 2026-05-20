@@ -1,0 +1,38 @@
+name: Model release request
+description: Propose adding a new model or updated artifact release
+title: "[Model Release]: "
+labels: [model-release]
+body:
+  - type: input
+    id: model_id
+    attributes:
+      label: Proposed model id
+      placeholder: unawain-<family>-<variant>-<quant>
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream model
+      placeholder: org/model-name
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Upstream license
+      placeholder: apache-2.0
+    validations:
+      required: true
+  - type: textarea
+    id: quantization
+    attributes:
+      label: Quantization and conversion details
+      description: Include script path and key conversion settings
+    validations:
+      required: true
+  - type: textarea
+    id: eval
+    attributes:
+      label: Evaluation snapshot
+      description: Include dataset and metrics summary
