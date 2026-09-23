@@ -17,7 +17,7 @@
 
 - Upstream model: `Qwen/Qwen2.5-1.5B-Instruct`
 - Upstream license: Apache-2.0
-- Conversion script: `scripts/conversion/convert_qwen_to_coreml.py`
+- Conversion script: `scripts/conversion/convert_qwen_to_coreml.py` (not yet included in this repository)
 - Conversion notes: causal-mask patch and int8 quantization
 
 ## License and Usage Terms

@@ -1,6 +1,6 @@
 # Unawain Public Models
 
-Production-ready, quantized on-device models for the Unawain stack, with reproducible conversion pipelines and release-quality documentation.
+Quantized Core ML models for the Unawain stack, published by Makata AI Edge Lab with provenance, license metadata, and model cards. Benchmarks are added to each card as they are measured; anything marked "Pending" has not been measured yet.
 
 ## Goals
 
@@ -16,6 +16,7 @@ Production-ready, quantized on-device models for the Unawain stack, with reprodu
 - `artifacts/`: Optional local staging area for release artifacts.
 - `scripts/build_manifest.py`: Generates checksums and size metadata.
 - `scripts/validate_repo.py`: Validates index, model cards, and artifacts.
+- `benchmarks/`: Latency harness, experiment protocols, and results (start with `benchmarks/README.md`).
 - `docs/`: Development and release documentation.
 - `.github/`: CI workflow, issue templates, PR template.
 

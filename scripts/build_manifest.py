@@ -79,11 +79,17 @@ def main() -> int:
 
     for model in models:
         artifact_path = resolve_artifact(repo_root, model, artifacts_dir)
+        if artifact_path and artifact_path.is_relative_to(repo_root):
+            display_path = str(artifact_path.relative_to(repo_root))
+        elif artifact_path:
+            display_path = artifact_path.name  # never publish paths outside the repo
+        else:
+            display_path = None
         entry = {
             "id": model.get("id"),
             "name": model.get("name"),
             "artifact_filename": model.get("artifact_filename"),
-            "resolved_path": str(artifact_path) if artifact_path else None,
+            "resolved_path": display_path,
             "exists": bool(artifact_path),
             "sha256": sha256_path(artifact_path) if artifact_path else None,
             "size_bytes": size_bytes(artifact_path) if artifact_path else None,

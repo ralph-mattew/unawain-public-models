@@ -17,7 +17,7 @@
 
 - Upstream model: `sshleifer/distilbart-cnn-6-6`
 - Upstream license: Apache-2.0
-- Conversion script: `scripts/conversion/convert_distilbart_fixed.py`
+- Conversion script: `scripts/conversion/convert_distilbart_fixed.py` (not yet included in this repository)
 
 ## License and Usage Terms
 

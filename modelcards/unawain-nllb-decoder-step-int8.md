@@ -17,7 +17,7 @@
 
 - Upstream model: `facebook/nllb-200-distilled-600M`
 - Upstream license: CC-BY-NC-4.0
-- Conversion script: `scripts/conversion/convert_nllb_to_coreml.py`
+- Conversion script: `scripts/conversion/convert_nllb_to_coreml.py` (not yet included in this repository)
 - Conversion notes: greedy decode compatible, iOS17+ target
 
 ## License and Usage Terms
@@ -29,21 +29,25 @@
 
 ## Inputs and Outputs
 
-- Input: `dec_ids` `[1, dec_len]` int32/int64
-- Input: `enc_out` `[1, src_len, 1024]` float16/float32
-- Output: `logits` `[1, vocab_size]` float16
+- Input: `dec_ids` `[1, 128]` int32 (full decoded prefix; no key-value cache)
+- Input: `enc_out` `[1, 256, 1024]` float32
+- Input: `dec_mask` `[1, 128]` float32
+- Input: `enc_mask` `[1, 256]` float32
+- Input: `last_pos` `[1, 1]` int32
+- Output: `mm` (next-token logits) `[1, 256206]` float32
 
 ## Platform Constraints
 
 - Minimum iOS: 17.0
 - Minimum macOS: 14.0
-- Compute assumptions: Apple Neural Engine preferred
+- Compute placement (measured, benchmark 001): no ops are Neural Engine-eligible (int8 weights, fp32 compute); runs on CPU. On macOS 26.5.1 / M4 Pro, loading with `ALL` or `CPU_AND_GPU` aborts during GPU compilation — use `CPU_ONLY` or `CPU_AND_NE`.
 
 ## Latency Benchmarks
 
 | Scenario | Device | Decode Length | p50 Latency (ms/token) | p95 Latency (ms/token) | Notes |
 |---|---|---:|---:|---:|---|
-| Decoder step | Apple Silicon / iOS17+ | 64 | Pending | Pending | Measure with greedy decode loop. |
+| Decoder step (single call) | Apple M4 Pro, macOS 26.5.1, `CPU_ONLY` | 64 of 128 positions | 41.94 | 43.68 | [Benchmark 001](../benchmarks/results/001-host-latency-pilot.md); per call, not a full decode loop. |
+| Decoder step | iPhone / iOS 17+ | 64 | Pending | Pending | Benchmark 002; measure with greedy decode loop. |
 
 ## Quality Benchmarks
 
